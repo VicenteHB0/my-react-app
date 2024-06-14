@@ -2,8 +2,8 @@
 const Imagen = ({ src, alt, ancho, alto, borde }) => {
     return (
       <img
-        src={src}
-        alt={alt}
+        src={`${process.env.PUBLIC_URL}/logo192.png`} 
+        alt={"Imagen"}
         style={{ width: ancho, height: alto, border: borde }}
       />
     );

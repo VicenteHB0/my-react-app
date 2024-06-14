@@ -3,6 +3,9 @@ import './App.css';
 import Titulo from './Titulo';
 import Parrafo from './Parrafo';
 import Imagen from './Imagen';
+import Contador from './Contador';
+import CambiarImagen from './CambiarImagen';
+import CambiarColorFondo from './CambiarColorFondo';
 
 function App() {
   return (
@@ -26,6 +29,9 @@ function App() {
         alto="150px" 
         borde="2px solid black" 
       />
+      <Contador/>
+      <CambiarImagen/>
+      <CambiarColorFondo/>
     </div>
   );
 }

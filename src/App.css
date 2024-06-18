@@ -120,3 +120,18 @@ body{
   width: 100%;
   text-align: center;
 }
+
+/* Estilos para la tabla */
+.table {
+  margin: 20px;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+}
+
+.table td i {
+  font-size: 1.5rem; /* Tamaño del icono */
+}
+

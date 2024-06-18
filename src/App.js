@@ -9,7 +9,16 @@ import CambiarColorFondo from "./CambiarColorFondo";
 import Toast from "./Toast";
 import ModalExample from "./ModalExample";
 import CarouselExample from "./CarouselExample";
-
+import TableExample from "./TableExample";
+/*
+const data = [
+  { text1: "Row 1 Column 1", text2: "Row 1 Column 2", icon: "fa-camera" },
+  { text1: "Row 2 Column 1", text2: "Row 2 Column 2", icon: "fa-github" },
+  { text1: "Row 3 Column 1", text2: "Row 3 Column 2", icon: "fa-heart" },
+  { text1: "Row 4 Column 1", text2: "Row 4 Column 2", icon: "fa-star" },
+  { text1: "Row 5 Column 1", text2: "Row 5 Column 2", icon: "fa-coffee" },
+];
+*/
 function App() {
   return (
     <div className="App">
@@ -46,6 +55,10 @@ function App() {
       <div>
         <h1>Carousel Example</h1>
         <CarouselExample />
+      </div>
+      <div >
+        <h1>Table Example</h1>
+        <TableExample />
       </div>
     </div>
   );

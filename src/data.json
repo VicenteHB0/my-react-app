@@ -1,0 +1,102 @@
+[
+    {
+        "text1": "Row 1 Column 1",
+        "text2": "Row 1 Column 2",
+        "icon": "fa-camera"
+    },
+    {
+        "text1": "Row 2 Column 1",
+        "text2": "Row 2 Column 2",
+        "icon": "fa-github"
+    },
+    {
+        "text1": "Row 3 Column 1",
+        "text2": "Row 3 Column 2",
+        "icon": "fa-heart"
+    },
+    {
+        "text1": "Row 4 Column 1",
+        "text2": "Row 4 Column 2",
+        "icon": "fa-star"
+    },
+    {
+        "text1": "Row 5 Column 1",
+        "text2": "Row 5 Column 2",
+        "icon": "fa-coffee"
+    },
+    {
+        "text1": "Row 6 Column 1",
+        "text2": "Row 6 Column 2",
+        "icon": "fa-car"
+    },
+    {
+        "text1": "Row 7 Column 1",
+        "text2": "Row 7 Column 2",
+        "icon": "fa-bolt"
+    },
+    {
+        "text1": "Row 8 Column 1",
+        "text2": "Row 8 Column 2",
+        "icon": "fa-cloud"
+    },
+    {
+        "text1": "Row 9 Column 1",
+        "text2": "Row 9 Column 2",
+        "icon": "fa-database"
+    },
+    {
+        "text1": "Row 10 Column 1",
+        "text2": "Row 10 Column 2",
+        "icon": "fa-envelope"
+    },
+    {
+        "text1": "Row 11 Column 1",
+        "text2": "Row 11 Column 2",
+        "icon": "fa-fire"
+    },
+    {
+        "text1": "Row 12 Column 1",
+        "text2": "Row 12 Column 2",
+        "icon": "fa-graduation-cap"
+    },
+    {
+        "text1": "Row 13 Column 1",
+        "text2": "Row 13 Column 2",
+        "icon": "fa-hammer"
+    },
+    {
+        "text1": "Row 14 Column 1",
+        "text2": "Row 14 Column 2",
+        "icon": "fa-key"
+    },
+    {
+        "text1": "Row 15 Column 1",
+        "text2": "Row 15 Column 2",
+        "icon": "fa-laptop"
+    },
+    {
+        "text1": "Row 16 Column 1",
+        "text2": "Row 16 Column 2",
+        "icon": "fa-music"
+    },
+    {
+        "text1": "Row 17 Column 1",
+        "text2": "Row 17 Column 2",
+        "icon": "fa-paw"
+    },
+    {
+        "text1": "Row 18 Column 1",
+        "text2": "Row 18 Column 2",
+        "icon": "fa-shopping-cart"
+    },
+    {
+        "text1": "Row 19 Column 1",
+        "text2": "Row 19 Column 2",
+        "icon": "fa-sun"
+    },
+    {
+        "text1": "Row 20 Column 1",
+        "text2": "Row 20 Column 2",
+        "icon": "fa-umbrella"
+    }
+]

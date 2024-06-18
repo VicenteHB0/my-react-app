@@ -41,3 +41,82 @@
 body{
   background-color: azure;
 }
+
+/*Estil para el Toast*/
+.custom-toast {
+  background-color: blue !important;
+  color: white !important;
+}
+
+/* Estilos para el modal */
+.Modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+/*Estilos para el Carousel*/
+.carousel .control-arrow,
+.carousel.carousel-slider .control-arrow {
+  -webkit-transition: all 0.25s ease-in;
+  -moz-transition: all 0.25s ease-in;
+  -ms-transition: all 0.25s ease-in;
+  -o-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  position: absolute;
+  z-index: 2;
+  top: 20%;
+  background: none;
+  border: 0;
+  font-size: 32px;
+  cursor: pointer;
+  color: green; /* Cambia el color de las flechas a verde */
+}
+
+.carousel .control-arrow:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.carousel .control-prev.control-arrow {
+  left: 0;
+}
+
+.carousel .control-next.control-arrow {
+  right: 0;
+}
+
+.carousel .control-dots .dot {
+  background: green; /* Cambia el color de los puntos a verde */
+}
+
+.carousel .legend {
+  background: rgba(0, 0, 0, 0.5);
+  color: green; /* Cambia el color del texto a verde */
+  padding: 10px;
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}

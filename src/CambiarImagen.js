@@ -1,5 +1,6 @@
 /*import useState para almacenar el estado del componete */
 import React, { useState } from "react";
+import { Button } from "reactstrap";
 
 const CambiarImagen = () => {
   /*imagenActual es la variable de estado */
@@ -20,7 +21,9 @@ const CambiarImagen = () => {
         style={{ width: "300px", height: "auto" }}
       />
       <br />
-      <button onClick={cambiarImagen}>Cambiar Imagen</button>
+      <Button onClick={cambiarImagen} color="danger">
+        Cambiar Imagen
+      </Button>
     </div>
   );
 };

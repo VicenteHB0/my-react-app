@@ -10,6 +10,9 @@ import Toast from "./Toast";
 import ModalExample from "./ModalExample";
 import CarouselExample from "./CarouselExample";
 import TableExample from "./TableExample";
+import FormularioRegistro from "./FormularioRegistro";
+import { Button, Container, Row, Col } from 'reactstrap';
+import React, { useState } from "react";
 /*
 const data = [
   { text1: "Row 1 Column 1", text2: "Row 1 Column 2", icon: "fa-camera" },
@@ -20,6 +23,11 @@ const data = [
 ];
 */
 function App() {
+  const [mostrarFormulario, setMostrarFormulario] = useState(false);
+
+  const toggleFormulario = () => {
+    setMostrarFormulario(!mostrarFormulario);
+  };
   return (
     <div className="App">
       <Titulo
@@ -56,9 +64,28 @@ function App() {
         <h1>Carousel Example</h1>
         <CarouselExample />
       </div>
-      <div >
+      <div>
         <h1>Table Example</h1>
         <TableExample />
+      </div>
+      <div>
+      <div className={`app-container ${mostrarFormulario ? 'overlay' : ''}`}>
+      <Container className="text-center">
+        <h1>Formulario de Registro</h1>
+        <Button color="primary" onClick={toggleFormulario}>
+          {mostrarFormulario ? 'Ocultar Formulario' : 'Mostrar Formulario'}
+        </Button>
+        {mostrarFormulario && (
+          <div className="form-wrapper">
+            <Row className="justify-content-center">
+              <Col md={6}>
+                <FormularioRegistro />
+              </Col>
+            </Row>
+          </div>
+        )}
+      </Container>
+    </div>
       </div>
     </div>
   );

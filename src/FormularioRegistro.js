@@ -1,8 +1,8 @@
 // src/Formulario.js
 import React, { useState } from 'react';
-import { Form, FormGroup, Label, Input, Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
+import { Form, FormGroup, Label, Input, Button, Modal, ModalHeader, ModalBody, FormFeedback } from 'reactstrap';
 
-const FormularioRegistro = () => {
+const Formulario = () => {
   const initialFormState = {
     nombre: '',
     apellido: '',
@@ -17,6 +17,7 @@ const FormularioRegistro = () => {
   };
 
   const [formData, setFormData] = useState(initialFormState);
+  const [formErrors, setFormErrors] = useState({});
   const [modal, setModal] = useState(false);
 
   const handleChange = (e) => {
@@ -27,17 +28,48 @@ const FormularioRegistro = () => {
     });
   };
 
+  const validateForm = () => {
+    let errors = {};
+
+    if (!/^[a-zA-Z]+$/.test(formData.nombre)) {
+      errors.nombre = 'Este campo solo acepta letras';
+    }
+
+    if (!/^[a-zA-Z]+$/.test(formData.apellido)) {
+      errors.apellido = 'Este campo solo acepta letras';
+    }
+
+    if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(formData.email)) {
+      errors.email = 'Debe tener formato de correo electrónico';
+    }
+
+    if (!/^[1-9][0-9]?$|^100$/.test(formData.edad)) {
+      errors.edad = 'Solo acepta números positivos, hasta el número 100';
+    }
+
+    if (new Date(formData.fechaRegistro) < new Date().setHours(0, 0, 0, 0)) {
+      errors.fechaRegistro = 'Solo debe aceptar fechas a partir del día en curso';
+    }
+
+    setFormErrors(errors);
+
+    return Object.keys(errors).length === 0;
+  };
+
   const toggleModal = () => {
     setModal(!modal);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Datos del formulario:', formData);
+    if (validateForm()) {
+      console.log('Datos del formulario:', formData);
+    }
   };
 
   const handleReset = () => {
     setFormData(initialFormState);
+    setFormErrors({});
   };
 
   return (
@@ -51,7 +83,10 @@ const FormularioRegistro = () => {
             name="nombre"
             value={formData.nombre}
             onChange={handleChange}
+            valid={formData.nombre && !formErrors.nombre}
+            invalid={!!formErrors.nombre}
           />
+          <FormFeedback>{formErrors.nombre}</FormFeedback>
         </FormGroup>
         <FormGroup>
           <Label for="apellido">Apellido:</Label>
@@ -61,7 +96,10 @@ const FormularioRegistro = () => {
             name="apellido"
             value={formData.apellido}
             onChange={handleChange}
+            valid={formData.apellido && !formErrors.apellido}
+            invalid={!!formErrors.apellido}
           />
+          <FormFeedback>{formErrors.apellido}</FormFeedback>
         </FormGroup>
         <FormGroup>
           <Label for="email">Email:</Label>
@@ -71,7 +109,10 @@ const FormularioRegistro = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
+            valid={formData.email && !formErrors.email}
+            invalid={!!formErrors.email}
           />
+          <FormFeedback>{formErrors.email}</FormFeedback>
         </FormGroup>
         <FormGroup>
           <Label for="contraseña">Contraseña:</Label>
@@ -91,7 +132,10 @@ const FormularioRegistro = () => {
             name="edad"
             value={formData.edad}
             onChange={handleChange}
+            valid={formData.edad && !formErrors.edad}
+            invalid={!!formErrors.edad}
           />
+          <FormFeedback>{formErrors.edad}</FormFeedback>
         </FormGroup>
         <FormGroup tag="fieldset">
           <legend>Género</legend>
@@ -164,7 +208,10 @@ const FormularioRegistro = () => {
             name="fechaRegistro"
             value={formData.fechaRegistro}
             onChange={handleChange}
+            valid={formData.fechaRegistro && !formErrors.fechaRegistro}
+            invalid={!!formErrors.fechaRegistro}
           />
+          <FormFeedback>{formErrors.fechaRegistro}</FormFeedback>
         </FormGroup>
         <Button type="submit" color="primary">Enviar</Button>
         <Button color="info" onClick={toggleModal} className="ml-2">Mostrar</Button>
@@ -190,4 +237,4 @@ const FormularioRegistro = () => {
   );
 };
 
-export default FormularioRegistro;
+export default Formulario;

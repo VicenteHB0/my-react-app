@@ -11,7 +11,7 @@ import ModalExample from "./ModalExample";
 import CarouselExample from "./CarouselExample";
 import TableExample from "./TableExample";
 import FormularioRegistro from "./FormularioRegistro";
-import { Button, Container, Row, Col } from 'reactstrap';
+import { Button, Container, Row, Col } from "reactstrap";
 import React, { useState } from "react";
 /*
 const data = [
@@ -23,14 +23,15 @@ const data = [
 ];
 */
 function App() {
-  const [mostrarFormulario, setMostrarFormulario] = useState(false);
+  // const [mostrarFormulario, setMostrarFormulario] = useState(false);
 
-  const toggleFormulario = () => {
-    setMostrarFormulario(!mostrarFormulario);
-  };
+  // const toggleFormulario = () => {
+  //   setMostrarFormulario(!mostrarFormulario);
+  // };
+
   return (
     <div className="App">
-      <Titulo
+      {/* <Titulo
         texto="Ejemplo del componente Titulo"
         tipoFuente="Arial"
         tamañoTexto="36px"
@@ -67,25 +68,20 @@ function App() {
       <div>
         <h1>Table Example</h1>
         <TableExample />
-      </div>
+      </div> */}
       <div>
-      <div className={`app-container ${mostrarFormulario ? 'overlay' : ''}`}>
-      <Container className="text-center">
-        <h1>Formulario de Registro</h1>
-        <Button color="primary" onClick={toggleFormulario}>
-          {mostrarFormulario ? 'Ocultar Formulario' : 'Mostrar Formulario'}
-        </Button>
-        {mostrarFormulario && (
-          <div className="form-wrapper">
-            <Row className="justify-content-center">
-              <Col md={6}>
-                <FormularioRegistro />
-              </Col>
-            </Row>
-          </div>
-        )}
-      </Container>
-    </div>
+        <div>
+          <Container className="text-center">
+            <h1>Formulario de Registro</h1>
+            <div className="form-wrapper">
+              <Row className="justify-content-center">
+                <Col md={12}>
+                  <FormularioRegistro />
+                </Col>
+              </Row>
+            </div>
+          </Container>
+        </div>
       </div>
     </div>
   );

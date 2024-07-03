@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import { Table, Button } from 'reactstrap';
 import { FaEdit } from 'react-icons/fa';
 import ModalEditar from './ModalEditar'; // Importa el nuevo componente del modal
-
+//porps pide una lista y la accion de editar y eliminar
 const TablaFormulario = ({ dataList, handleDelete, handleEdit }) => {
+
   const [selectedData, setSelectedData] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+//Pra saber si el modal esta abierto o cerrado
   const toggleModal = () => setIsModalOpen(!isModalOpen);
 
   const handleEditClick = (index) => {
@@ -55,6 +56,7 @@ const TablaFormulario = ({ dataList, handleDelete, handleEdit }) => {
           ))}
         </tbody>
       </Table>
+      
       {selectedData && (
         <ModalEditar
           isOpen={isModalOpen}

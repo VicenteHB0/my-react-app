@@ -3,6 +3,8 @@ import { Form, FormGroup, Label, Input, Button, FormFeedback, Container, Row, Co
 import TablaFormulario from './TablaFormulario'; // Importa el nuevo componente de tabla
 
 const FormularioRegistro = () => {
+
+  //Define bacios los campos para reiniciarlos
   const initialFormState = {
     nombre: '',
     apellido: '',
@@ -18,6 +20,7 @@ const FormularioRegistro = () => {
 
   const [formData, setFormData] = useState(initialFormState);
   const [formErrors, setFormErrors] = useState({});
+  //Arreglo para los objetos del formulario
   const [dataList, setDataList] = useState([]);
 
   const handleChange = (e) => {
@@ -27,7 +30,7 @@ const FormularioRegistro = () => {
       [name]: type === 'checkbox' ? checked : value
     });
   };
-
+ //Funcion con expreciones regulares para validar los campos
   const validateForm = () => {
     let errors = {};
 
@@ -68,12 +71,12 @@ const FormularioRegistro = () => {
     setFormData(initialFormState);
     setFormErrors({});
   };
-
+  //para borrar un objeto del arreglo
   const handleDelete = (index) => {
     const newList = dataList.filter((_, i) => i !== index);
     setDataList(newList);
   };
-
+  //mapeo de arrelgo para poder encontrar el objeto deceado a editar
   const handleEdit = (editedData) => {
     const newList = dataList.map((data, i) => (i === editedData.index ? editedData : data));
     setDataList(newList);
@@ -226,6 +229,7 @@ const FormularioRegistro = () => {
             <Button color="secondary" onClick={handleReset} className="ml-2">Reiniciar</Button>
           </Form>
         </Col>
+        
         <Col md={9}>
           <TablaFormulario dataList={dataList} handleDelete={handleDelete} handleEdit={handleEdit} /> {/* Pasa el arreglo de datos y la función de eliminar */}
         </Col>

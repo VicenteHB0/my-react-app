@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button, Form, FormGroup, Label, Input, FormFeedback } from 'reactstrap';
 
 const ModalEditar = ({ isOpen, toggle, data, handleEdit }) => {
+  
   const [formData, setFormData] = useState(data);
   const [formErrors, setFormErrors] = useState({});
 

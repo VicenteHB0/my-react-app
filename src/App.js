@@ -13,6 +13,7 @@ import TableExample from "./TableExample";
 import FormularioRegistro from "./FormularioRegistro";
 import { Button, Container, Row, Col } from "reactstrap";
 import React, { useState } from "react";
+import UserCard from "./UserCard";
 /*
 const data = [
   { text1: "Row 1 Column 1", text2: "Row 1 Column 2", icon: "fa-camera" },
@@ -69,7 +70,7 @@ function App() {
         <h1>Table Example</h1>
         <TableExample />
       </div> */}
-      <div>
+      {/*}<div>
         <div>
           <Container className="text-center">
             <h1>Formulario de Registro</h1>
@@ -82,6 +83,10 @@ function App() {
             </div>
           </Container>
         </div>
+      </div>
+      {*/}
+      <div className="container mt-5">
+        <UserCard />
       </div>
     </div>
   );

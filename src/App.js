@@ -14,6 +14,7 @@ import FormularioRegistro from "./FormularioRegistro";
 import { Button, Container, Row, Col } from "reactstrap";
 import React, { useState } from "react";
 import UserCard from "./UserCard";
+import BeerTable from "./BearTable";
 /*
 const data = [
   { text1: "Row 1 Column 1", text2: "Row 1 Column 2", icon: "fa-camera" },
@@ -87,6 +88,9 @@ function App() {
       {*/}
       <div className="container mt-5">
         <UserCard />
+      </div>
+      <div>
+        <BeerTable />
       </div>
     </div>
   );
